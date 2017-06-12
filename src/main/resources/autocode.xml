@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+    <!--<db>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://218.94.60.50:53310/qmlf"/>
+        <property name="username" value="qmlf"/>
+        <property name="password" value="qmlf12345"/>
+    </db>-->
+    <db>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://10.100.156.106:3500/TCBusOrder"/>
+        <property name="username" value="TCBusOrder_local"/>
+        <property name="password" value="!#eM*6NrGlCGFj%x+ynApWK4$"/>
+    </db>
+    <project>
+        <!--acl consumer.xml 路径-->
+        <property name="aclConsumer" value="axp-acl\src\main\resources\spring\spring-consumers-%.xml"/>
+        <!--bll provider.xml 路径-->
+        <property name="bllProvider" value="axp-bll\src\main\resources\spring\spring-providers-%.xml"/>
+        <!--bll consumer.xml 路径-->
+        <property name="bllConsumer" value="axp-bll\src\main\resources\spring\spring-consumers-%.xml"/>
+        <!--dal provider.xml 路径-->
+        <property name="dalProvider" value="axp-dal\src\main\resources\spring\spring-providers-%.xml"/>
+    </project>
+    <needEdit>
+        <!--java后台项目地址 D:/ideaspace/axp/-->
+        <property name="project" value="D:\tool\Autocode\src\main\java\com\martin\entity\"/>
+        <!--作者-->
+        <property name="author" value="wangyu"/>
+        <!--业务中心 全小写-->
+        <property name="center" value="accountcenter"/>
+        <!--业务中心编码 -->
+        <property name="centerCode" value="02"/>
+        <!--只支持单表表名-->
+        <property name="table" value="BusBussiness"/>
+        <!-- eg:CityBean.java 就填 City 驼峰-->
+        <property name="model" value="BusBussinessEntity"/>
+        <!-- 业务定义，eg:城市信息 -->
+        <property name="bizName" value="系统用户日志"/>
+        <!-- acl层 tomcat端口号 -->
+        <property name="tomcatPort" value="8001"/>
+    </needEdit>
+</defaults>

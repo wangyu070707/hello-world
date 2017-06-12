@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: lib\markup-document-builder-0.1.4.jar lib\slf4j-api-1.7.12
+ .jar lib\mysql-connector-java-5.1.38.jar lib\freemarker-2.3.16.jar
+Main-Class: com.martin.StartCode
+

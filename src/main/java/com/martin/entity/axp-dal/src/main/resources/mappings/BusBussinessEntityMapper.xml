@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ly.bs.dao.accountcenter.BusBussinessEntityMapper">
+    <resultMap id="BaseResultMap" type="com.ly.bs.modules.accountcenter.bean.BusBussinessEntityBean">
+        <constructor >
+            <arg column="BussinessID" jdbcType="BIGINT" javaType="java.lang.Long" />
+            <arg column="bizName" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="bizFlag" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="bizAmount" jdbcType="DECIMAL" javaType="java.lang.Integer" />
+            <arg column="bizType" jdbcType="BIGINT" javaType="java.lang.Long" />
+            <arg column="bizChargingRules" jdbcType="DECIMAL" javaType="java.lang.Long" />
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List" >
+        BussinessID,bizName,bizFlag,bizAmount,bizType,bizChargingRules
+    </sql>
+
+    <insert id="insertSelective" parameterType="com.ly.bs.modules.accountcenter.bean.BusBussinessEntityBean" >
+        insert into BUSBUSSINESS
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="bussinessid != null" >
+            BussinessID,
+            </if>
+            <if test="bizname != null" >
+            bizName,
+            </if>
+            <if test="bizflag != null" >
+            bizFlag,
+            </if>
+            <if test="bizamount != null" >
+            bizAmount,
+            </if>
+            <if test="biztype != null" >
+            bizType,
+            </if>
+            <if test="bizchargingrules != null" >
+            bizChargingRules,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="bussinessid != null" >
+            #{bussinessid,jdbcType=BIGINT},
+            </if>
+            <if test="bizname != null" >
+            #{bizname,jdbcType=VARCHAR},
+            </if>
+            <if test="bizflag != null" >
+            #{bizflag,jdbcType=INTEGER},
+            </if>
+            <if test="bizamount != null" >
+            #{bizamount,jdbcType=DECIMAL},
+            </if>
+            <if test="biztype != null" >
+            #{biztype,jdbcType=BIGINT},
+            </if>
+            <if test="bizchargingrules != null" >
+            #{bizchargingrules,jdbcType=DECIMAL},
+            </if>
+        </trim>
+    </insert>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+        delete from BUSBUSSINESS where 
+    </delete>
+    <update id="updateByPrimaryKeySelective" parameterType="com.ly.bs.modules.accountcenter.bean.BusBussinessEntityBean" >
+        update BUSBUSSINESS
+        <set >
+            <if test="bussinessid != null" >
+            BussinessID = #{bussinessid,jdbcType=BIGINT},
+            </if>
+            <if test="bizname != null" >
+            bizName = #{bizname,jdbcType=VARCHAR},
+            </if>
+            <if test="bizflag != null" >
+            bizFlag = #{bizflag,jdbcType=INTEGER},
+            </if>
+            <if test="bizamount != null" >
+            bizAmount = #{bizamount,jdbcType=DECIMAL},
+            </if>
+            <if test="biztype != null" >
+            bizType = #{biztype,jdbcType=BIGINT},
+            </if>
+            <if test="bizchargingrules != null" >
+            bizChargingRules = #{bizchargingrules,jdbcType=DECIMAL},
+            </if>
+        </set>
+        where 
+    </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select
+        <include refid="Base_Column_List" />
+        from BUSBUSSINESS
+        where 
+    </select>
+    <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select  * from BUSBUSSINESS
+    </select>
+</mapper>
