@@ -8,7 +8,7 @@ package com.martin;
  */
 public class StartCode {
     public static void main(String[] args) throws Exception {
-        System.out.println("测试合并2222222");
+        System.out.println("测试合并2222222333333");
         CodeUtil util = new CodeUtil();
 //        util.createController();
         util.createBean();
