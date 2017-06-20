@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.Map;
 
 /**
- * Created by Martin on 2016/4/8.
+ * Created by wangy on 2016/4/8.
  */
 public class DBUtil {
     /**
